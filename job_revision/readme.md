@@ -11,7 +11,7 @@
 
 
 - 设计模式：  
-  - [设计模式](设计模式.md)
+  - [MVC,MVP,MVVP](设计模式.md#mvcmvpmvvm)
 
 - 通信
 
