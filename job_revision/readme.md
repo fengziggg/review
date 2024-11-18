@@ -12,6 +12,7 @@
 
 - 设计模式：  
   - [MVC,MVP,MVVP](设计模式.md#mvcmvpmvvm)
+  - [ECS](设计模式.md#ecs)
 
 - 通信
 
