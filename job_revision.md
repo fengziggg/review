@@ -7,10 +7,40 @@
 - 项目架构：
 引擎+公共代码+项目代码
 状态同步
-项目：ECGame，
+项目：ECGame，MVC，ECS
 
 
-- 设计模式
+- 设计模式：
+  https://juejin.cn/post/6901200799242649607
+  - MVC：
+    Ctrl入视角：开发者/用户User [->View(可能通过UI)]-> Ctrl<br>
+    Ctrl出视角：Ctrl -> View， Ctrl -> Model<br>
+    View入视角：View <-req- Model, View <-notify- Model<br>
+    (项目并不是存粹的mvc，mvc类似与web基础的模式，view就是一份html资产，交给jsp渲染或者后端进行渲染,所以渲染逻辑会在非view的地方出现；项目的qt式已经是吧view资产和view逻辑进行集成了，ctrl就是ctrl了)<br>
+    按常用的数据流向<br>
+    ![image](https://github.com/user-attachments/assets/68415608-ace3-44f7-ac3e-1c415bdb1735)<br>
+    问题：
+    维护：
+    0.三角的关系在view和ctrl视角会同时操控到两个其他角色的情况，比如view可能既要访问model又要依据数据(先验)给ctrl下指令，追溯一些业务要关系的逻辑线变多(非线性，model又被ctrl影响，可能又要关心这个ctrl的操作在view发起的ctrl操作的顺序问题，反正就是关心的对象多了可能会有很饶的情况)
+    1.ctrl既负责了一部分view的内容(基础渲染逻辑，显示加工渲染逻辑，生命周期维护，数据加工逻辑，后俩着在c)导致ctrl逐渐臃肿，ctrl还要承担对外交互和调控整个业务的职责
+    2.非mvc结构问题，之前项目存在嵌套mvc，跨模块时候很痛苦
+    独立性：
+    v依赖m导致v不够独立？(依赖但是初始化不依赖与m或者有默认值不就可以?)
+
+  - MVP：
+    ![image](https://github.com/user-attachments/assets/3d12f582-2516-4afc-b6c4-7057097e64a8)
+    砍了model和view之间联系的mvc，关系变成线性<br>
+    将view进行内聚，view的显示加工逻辑也放到view里面<br>
+    demo里面view初始化的时候初始化一个代理，由代理跟model打交道，对于view只存在P并只关心与P约定需要接口<br>
+    问题：
+    0.面向接口编程，更加规范方便测试，但是接口增多(比如view到model的数据获取再看了v和m的直接链接后，只能通过presenter获取model的数据，还可能是异步)，代码设计要求变高
+    1.view和presenter还是双向持有(对比mvvm)
+
+   - MVVM:
+     比起mvvm又多了一个双向绑定，没了v和p的双向持有，用框架提供的功能比如继承了mv对象后，在view的配置文件里面指定继承类，然后在view的数据填充处直接用抽象(暂未实例化出来)的mv对象进行占位，框架启动后自动匹配字段和进行双向绑定，类似于吧重复劳动自动化<br>
+     mv就是对界面的对象化抽象，当作实体对象来使用跟model打交道
+    
+
 
 - 通信
 
