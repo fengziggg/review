@@ -10,3 +10,6 @@ filter,map
 
 ?? https://peps.python.org/pep-0422/
 https://python3-cookbook.readthedocs.io/zh-cn/latest/c09/p19_initializing_class_members_at_definition_time.html
+
+2024//11/20  
+![image](https://github.com/user-attachments/assets/521030e5-27f9-4e23-b245-b7822451aab5)
