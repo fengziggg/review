@@ -13,3 +13,9 @@ https://python3-cookbook.readthedocs.io/zh-cn/latest/c09/p19_initializing_class_
 
 2024//11/20  
 ![image](https://github.com/user-attachments/assets/521030e5-27f9-4e23-b245-b7822451aab5)
+
+exec  :
+https://blog.csdn.net/LutingWang/article/details/124133994
+![image](https://github.com/user-attachments/assets/1910e3ef-0561-41f0-9636-12e336bf26ca)
+![image](https://github.com/user-attachments/assets/b3238fce-1901-45cb-8f62-ead0686654f8)
+
