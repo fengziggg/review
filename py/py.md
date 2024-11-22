@@ -31,6 +31,11 @@ https://rhettinger.wordpress.com/2011/05/26/super-considered-super/  c3线性mro
 ![image](https://github.com/user-attachments/assets/a7b9ba83-a4d8-4ad6-8807-1a25d22eef22)
 
 
+2024/11/22
+![image](https://github.com/user-attachments/assets/31c34a63-94c7-4754-b3b3-50b6abc0e7fe) 
+![image](https://github.com/user-attachments/assets/ccf45782-0412-4dfd-a651-0f89e5f2d4cc)
+👌:__getattr__只分发.运算符失败的情况，len和[]和=是其他运算符有各自对应的其他钩子函数
+
 
 
 
