@@ -37,5 +37,7 @@ https://rhettinger.wordpress.com/2011/05/26/super-considered-super/  c3线性mro
 👌:__getattr__只分发.运算符失败的情况，len和[]和=是其他运算符有各自对应的其他钩子函数
 
 
-
-
+2024/11/23
+分辨率章节？？
+![image](https://github.com/user-attachments/assets/0f1f8dd4-39bc-4e0c-a9ae-df5f658cd13f)
+❓：前面渲染提到可见性不影响事件触发还是分发？
