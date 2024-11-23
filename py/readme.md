@@ -38,7 +38,7 @@ https://rhettinger.wordpress.com/2011/05/26/super-considered-super/  c3线性mro
 
 
 2024/11/23
-分辨率章节？？
+分辨率章节？？  
 ![image](https://github.com/user-attachments/assets/583f59ce-2d49-4e74-a61a-8648d9f6db1c)
 ![image](https://github.com/user-attachments/assets/0f1f8dd4-39bc-4e0c-a9ae-df5f658cd13f)
 ❓：前面渲染提到可见性不影响事件触发还是分发？
