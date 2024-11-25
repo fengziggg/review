@@ -42,3 +42,14 @@ https://rhettinger.wordpress.com/2011/05/26/super-considered-super/  c3线性mro
 ![image](https://github.com/user-attachments/assets/583f59ce-2d49-4e74-a61a-8648d9f6db1c)
 ![image](https://github.com/user-attachments/assets/0f1f8dd4-39bc-4e0c-a9ae-df5f658cd13f)
 ❓：前面渲染提到可见性不影响事件触发还是分发？
+
+2024/11/25
+![image](https://github.com/user-attachments/assets/04060b23-077a-4cf7-a377-1b232ff4cb2e)  
+![image](https://github.com/user-attachments/assets/6ee4fcf8-5b11-4be6-bd82-c9a3e0fdca57) ❓  
+![image](https://github.com/user-attachments/assets/065cf998-2b15-4239-94c5-26da2a6a9c8c)❓  
+
+管道用法：https://www.dabeaz.com/generators/  
+async用法嵌套实现：
+yield from基于生成器和携程的并发编程：生成器吧语法块变成可迭代对象(语法块列表)，就吧静态逻辑给数据化下来，数据化下来之后就可以实现切换上下文即携程并发
+![image](https://github.com/user-attachments/assets/1af958b4-2acd-485b-9f2d-473c15e596c9)
+
