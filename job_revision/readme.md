@@ -124,6 +124,10 @@
     - 加速：
       
     - 六边形地图：
+      ![05574be53ea45aaba771739c6b7d5b0](https://github.com/user-attachments/assets/d71ad69c-2fd4-4ea7-893f-df91ea7c6681) 轴坐标系/立方体坐标系qrs
+      轴坐标系/立方体坐标系qrs:
+      支持四则运算和向量运算：平移、旋转、采样、范围...  
+      https://www.redblobgames.com/grids/hexagons/#map-storage
       
     - 录像：
       
