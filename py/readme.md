@@ -46,3 +46,23 @@ async用法嵌套实现：
 yield from基于生成器和携程的并发编程：生成器吧语法块变成可迭代对象(语法块列表)，就吧静态逻辑给数据化下来，数据化下来之后就可以实现切换上下文即携程并发
 ![image](https://github.com/user-attachments/assets/1af958b4-2acd-485b-9f2d-473c15e596c9)
 
+2024/11/26
+![image](https://github.com/user-attachments/assets/22e4ded6-e172-4ea2-bdee-91d4c9125ebb)
+![image](https://github.com/user-attachments/assets/9cd2511f-0d75-4215-8baa-8825dd21952e)  ret>2❓  
+lambda：
+![image](https://github.com/user-attachments/assets/5f265854-5e19-490e-9083-5df4f5bd80d8)  正常函数有独立上下文，因为变量通过参数传递内外隔离，lambda可以捕获上下文参数(闭包)所以不是隔离环境而是运行时环境；lambda更像是express
+![image](https://github.com/user-attachments/assets/ffed9616-3270-44e8-b774-22b6d35d800c)  这里lambda里面的n在定义lamda的时候并没有被eval，所以是个变量  
+而且这种是在运行时动态定义函数，函数要么是硬编码，或是用api动态的增加属性定义，运行时动态定义 是想当然了，里面的n不会被当作定义而是解释为捕获
+
+参数定义和解释的歧义❓
+![image](https://github.com/user-attachments/assets/e85241c5-8574-4849-a3af-e297596dd9cc)
+
+需要保存上下文的简单方法：
+单一功能函数类，用成员方法或者重载__call__
+函数闭包
+yield
+特点: obj(*args)(*args)
+
+![image](https://github.com/user-attachments/assets/42a800bc-9e76-412c-a938-6ddf5abf8525)  ❓queue会阻塞yield??
+
+
