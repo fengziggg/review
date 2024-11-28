@@ -128,6 +128,8 @@
       轴坐标系/立方体坐标系qrs:
       支持四则运算和向量运算：平移、旋转、采样、范围...  
       https://www.redblobgames.com/grids/hexagons/#map-storage
+      ![image](https://github.com/user-attachments/assets/7523514e-411d-4e74-be64-834826eb27dc) ❓odd-r交叉处的pix归属？？
+
       
     - 录像：  
       一般是帧同步记录操作，或者状态同步记录状态切片文件(精度问题和文件储存占用)  
