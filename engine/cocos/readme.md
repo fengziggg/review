@@ -23,3 +23,5 @@ writeDepth/testDepth
 
 ![image](https://github.com/user-attachments/assets/484b20e3-ed62-42ca-9f08-7b9dc487efdd)  batchSpriteNode(可能自动合批GroupCommand也是)就是收集顶点，复用一张贴图，节省为一次dc，优化点在于资源加载节省和管线便利节省，但多了顶点收集操作和便利顶点规模增加，但相比前两者应该是可以忽略不计，即绘制一个复杂模型和绘制多次简单模型的差别
  
+2024/11/29
+![image](https://github.com/user-attachments/assets/3089b617-c39a-4d48-ae0c-f6810df8c73f)
