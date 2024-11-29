@@ -1,4 +1,4 @@
-2024/10/17  
+![image](https://github.com/user-attachments/assets/0233aabc-f9e1-4d76-90de-77d276246380)2024/10/17  
 https://github.com/jackfrued/Python-Interview-Bible/blob/master/Python%E9%9D%A2%E8%AF%95%E5%AE%9D%E5%85%B8-%E5%9F%BA%E7%A1%80%E7%AF%87-2020.md  
 CPython,PIPY  
 filter,map  
@@ -64,5 +64,15 @@ yield
 特点: obj(*args)(*args)
 
 ![image](https://github.com/user-attachments/assets/42a800bc-9e76-412c-a938-6ddf5abf8525)  ❓queue会阻塞yield??
+
+
+2024/11/28  
+![image](https://github.com/user-attachments/assets/f42dc004-1176-4ca4-8856-84cd411742fa)  ：import有不能import的类型？直接import/from import
+https://peps.python.org/pep-0420/  : import pep  
+![image](https://github.com/user-attachments/assets/64636889-4ab5-440f-9394-e0d16b94a927): 模块里面的东西都是新的指向，模块本身的地址没变，所以用模块索引可以，直接用模块里面的指向内容则没法跟随更新  
+![image](https://github.com/user-attachments/assets/fc08fa93-2a1a-401e-880a-3c456e4d2a3d)  
+自定义loader和importer:  
+https://python3-cookbook.readthedocs.io/zh-cn/latest/c10/p11_load_modules_from_remote_machine_by_hooks.html
+https://peps.python.org/pep-0302/
 
 
