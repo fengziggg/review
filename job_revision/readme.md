@@ -125,10 +125,12 @@
       
     - 六边形地图：
       ![05574be53ea45aaba771739c6b7d5b0](https://github.com/user-attachments/assets/d71ad69c-2fd4-4ea7-893f-df91ea7c6681) 轴坐标系/立方体坐标系qrs
-      轴坐标系/立方体坐标系qrs:
-      支持四则运算和向量运算：平移、旋转、采样、范围...  
+      轴坐标系/立方体坐标系qrs  
+      支持四则运算和向量运：    
+      > 向量运算:(基坐标有所不一样),  $\color{#ff0000}{浮点向量的取整(round(max(axial))修正)}$ ,向量和像素互换    
+      > 采样: DDA, freshham??  
+      > 范围：max(q, r, s) == dist, circle遍历，max/min求交集，Rotate(为同dist的圈中rotate，六边形圈为基点)  
       https://www.redblobgames.com/grids/hexagons/#map-storage
-      ![image](https://github.com/user-attachments/assets/7523514e-411d-4e74-be64-834826eb27dc) ❓odd-r交叉处的pix归属？？
 
       
     - 录像：  
