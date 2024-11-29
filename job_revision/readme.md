@@ -124,13 +124,16 @@
     - 加速：
       
     - 六边形地图：
-      ![05574be53ea45aaba771739c6b7d5b0](https://github.com/user-attachments/assets/d71ad69c-2fd4-4ea7-893f-df91ea7c6681) 轴坐标系/立方体坐标系qrs
-      轴坐标系/立方体坐标系qrs  
-      支持四则运算和向量运：    
-      > 向量运算:(基坐标有所不一样),  $\color{#ff0000}{浮点向量的取整(round(max(axial))修正)}$ ,向量和像素互换    
-      > 采样: DDA, freshham??  
-      > 范围：max(q, r, s) == dist, circle遍历，max/min求交集，Rotate(为同dist的圈中rotate，六边形圈为基点)  
-      https://www.redblobgames.com/grids/hexagons/#map-storage
+      ![05574be53ea45aaba771739c6b7d5b0](https://github.com/user-attachments/assets/d71ad69c-2fd4-4ea7-893f-df91ea7c6681) 
+      轴坐标系/立方体坐标系qrs   
+      > 1. 向量运算:(基坐标有所不一样),  $\color{#ff0000}{浮点向量的取整(round(max(axial))修正)}$ ,向量和像素互换  
+      > 2. $\color{red}{坐标转换}$ ：axial/cube <--> offset  
+      > 3. 采样: DDA, freshham??    
+      > 4. 范围：max(q, r, s) == dist, circle遍历，max/min求交集，Rotate(为同dist的圈中rotate，六边形圈为基点)  
+      > 5. $\color{red}{寻路}$ ：无差别，huristic: max(q)+max(r)  
+      > 6. 射线检测：breshham 🛠️，https://www.redblobgames.com/articles/visibility/(碰撞点/边排序后按角度检测碰撞) 🛠️
+
+      https://www.redblobgames.com/grids/hexagons/#map-storage  
 
       
     - 录像：  
