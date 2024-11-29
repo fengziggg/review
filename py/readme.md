@@ -1,3 +1,5 @@
+re/sys._getframe().f_locals  
+
 ![image](https://github.com/user-attachments/assets/0233aabc-f9e1-4d76-90de-77d276246380)2024/10/17  
 https://github.com/jackfrued/Python-Interview-Bible/blob/master/Python%E9%9D%A2%E8%AF%95%E5%AE%9D%E5%85%B8-%E5%9F%BA%E7%A1%80%E7%AF%87-2020.md  
 CPython,PIPY  
@@ -74,5 +76,11 @@ https://peps.python.org/pep-0420/  : import pep
 自定义loader和importer:  
 https://python3-cookbook.readthedocs.io/zh-cn/latest/c10/p11_load_modules_from_remote_machine_by_hooks.html
 https://peps.python.org/pep-0302/
+
+  
+2024/11/29   
+re  
+unicode 相关:  https://nedbatchelder.com/text/unipain.html    
+https://python3-cookbook.readthedocs.io/zh-cn/latest/c02/p19_writing_recursive_descent_parser.html  
 
 
