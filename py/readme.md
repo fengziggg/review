@@ -83,4 +83,18 @@ re
 unicode 相关:  https://nedbatchelder.com/text/unipain.html    
 https://python3-cookbook.readthedocs.io/zh-cn/latest/c02/p19_writing_recursive_descent_parser.html  
 
+2024/12/2
+![image](https://github.com/user-attachments/assets/bb5850af-98a3-4503-aa16-52ed6ee73a4a)
+![image](https://github.com/user-attachments/assets/b563393f-1b76-4e2f-a17e-458ff518ee56)  ❓
+
+![image](https://github.com/user-attachments/assets/2b0545d2-95fd-4daf-bc33-af10bc70a3be)  ❓start没有立即执行
+
+![image](https://github.com/user-attachments/assets/b3a5b1ee-e0c9-442f-bcaa-674e79648788)   ❓with + condition(enter/exit do what)
+
+![image](https://github.com/user-attachments/assets/be011162-d3db-43b8-b423-23576b5e038f)  ❓信号量的意义
+
+![image](https://github.com/user-attachments/assets/76d54914-f164-44b0-ad73-85edf7c8c4b8)
+
+![image](https://github.com/user-attachments/assets/9cbe11a5-a9f2-4f04-be87-a5b7fd5c7951)  ❓原语级别
+
 
