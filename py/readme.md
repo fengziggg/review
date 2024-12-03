@@ -97,4 +97,35 @@ https://python3-cookbook.readthedocs.io/zh-cn/latest/c02/p19_writing_recursive_d
 
 ![image](https://github.com/user-attachments/assets/9cbe11a5-a9f2-4f04-be87-a5b7fd5c7951)  ❓原语级别
 
+2024/12/03  
+
+socket/IO是自带阻塞的  
+线程是多一个独立执行者(执行完整任务：func)，阻塞是阻塞，目前有event，condition，semaphore，queue，两者是独立不相关的   
+但两者常配合使用，阻塞是阻塞线程，可以是主线程也可以是其他线程，再配合分配多个线程，就可以开辟多个执行者，在不同执行者身上加阻塞逻辑来实现同步  
+协程是用户自定义中断和自定义调度实现线程的基础，线程相当于os帮你调度不可干预，协程为自己调度
+
+thread.join??  
+join可能是吧线程归并到主线程上来??  
+asyncio: https://www.cnblogs.com/changting/p/13731794.html  🔎  
+
+![image](https://github.com/user-attachments/assets/9ea65f33-daee-478f-94ed-40a1a9fa87be)  一个int的整数部分pow(2, 15)  
+![image](https://github.com/user-attachments/assets/82bfca53-ba99-40a2-bd48-4d5cc1b6c6bb)  ❓  
+开启多线程/线程池后会阻塞主进程，看起来好像还是等待一件事情完成，但用处是处理的任务*n并行，pool封装了都会等待future的执行完毕再推进main??   
+GIL  
+gil是对解释器工作枷锁的(py构建者级别的锁，比如对引用计数的加锁，对cpu还是gpu访问类别区分的加锁，Lock是用户级别的枷锁)
+![image](https://github.com/user-attachments/assets/098ca093-77bb-4dfe-bbdd-cfaa838a97a1)  🔍
+![image](https://github.com/user-attachments/assets/a8f97a80-7d67-42b9-94c8-b15a158d6260)  ❓
+![image](https://github.com/user-attachments/assets/171a8f74-cf8b-439d-8e78-9b954d7e7e3e)  
+
+相互加锁依赖却没有死锁：  
+result加的锁目的是用于获取返回值，保证驱动了第一个锁的执行即保证打破一次锁定  
+这里用的queue，应该queue还有类似帧的延迟间隔(get/put)，所以start/put/get对应的多线程命令没有与主线程时序矛盾(主线程直接都到close和join了)  
+![image](https://github.com/user-attachments/assets/a2c96733-ff72-4888-9ac8-2c5dee19c971)  
+
+任务系统demo:  (循环)
+> sche 主循环: 执行task，执行io；  
+> task: 添加io事件  
+> io事件: 执行io操作添加task
+
+
 
