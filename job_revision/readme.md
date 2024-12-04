@@ -223,4 +223,6 @@ https://blog.csdn.net/qq_39847278/article/details/140821766
 
 正则
 
+SIMT并行加速
+
 ---
