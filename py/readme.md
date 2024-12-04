@@ -127,5 +127,16 @@ result加的锁目的是用于获取返回值，保证驱动了第一个锁的�
 > task: 添加io事件  
 > io事件: 执行io操作添加task
 
+2024/12/04  
+![image](https://github.com/user-attachments/assets/843cfaed-b1dc-455a-ad99-cfde069c1646)   
+encode/decode  
+1. unicode和ascii/utfn: unicode是逻辑上的编码分配表(字符映射关系)  utf/ascii/...是一种内存存储方式(客观编码方式)  
+2. 编码方式的差别：一个字符X如果unicode是逻辑10000，那存在内存中可以是按定长(ascii/latin-1)也可以是按变长(utfn)，这两种差异在写入文件的时候导致写入的最终byte内容不一致，一个是有很多0然后按固定为写入和解析，一个是没有无用0然后一个c写入和读取的时候的位数(一般是字节为最小单位)是动态的(比如中文的utf可能是3B也可能是4B)  
+3. py3：不管以什么格式进行编码解码，最终都是二进制数据的不同解读规则底层都是二进制数据，只是以一种编码方式持久话的二进制数据被加载出来后(bytearray)以另一种方式解码，那就可能解读错意思乱码，但保存的时候都是保存为二进制数据(不过不是都以utf格式)，即持久化的时候都是跟bytearray打交道，bytearray就是unicode的默认最精简表达方式；  py2的区别❓❓
+4. ascii和utf转换报错一般是utf转ascii，因为utf转为二进制数据后一个字节可能被填满但ascii的范围只有128一个字节有一半是非法定义的
+![image](https://github.com/user-attachments/assets/6f04d6bf-ac65-46bb-9d7f-0da5a9e23421)
+
+pickle  ❓❓
+
 
 
