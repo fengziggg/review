@@ -23,3 +23,14 @@ PyTypeObject实例化出:
   -  object的父类没有继续指向自己，说是怕递归
   
 ----
+##### List：  
+1. 内存结构体: PyVarObj + allocated + *ob_item (头部固定3+2字)  
+2. 常用操作：增append,insert, concat, +, *, 删remove, pop，改=, 查[], index  
+3. ob_item指针数组动态扩容：  
+  > list_reisize: 增长模型 new_size + new_size//8 + (new_size<9)3:6，❓❓（0, 4, 8, 16...怎么来），PyMem_alloc  
+  > list_ass_slice: 对内存上区间数据进行修改，删除即前插(O(n))，或者直接该值，会释放对象
+
+4. append: 检查，resize，引用，setItem
+5. insert: 检查，resize，引用，前插迁移新内存上数据
+6. pop: 检查，调用resize或者ass_slice，resize占用list的引用/ass_slice要预先增加一次引用
+7. remove: 遍历比对后ass_slice 
