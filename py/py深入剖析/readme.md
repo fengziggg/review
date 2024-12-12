@@ -27,7 +27,8 @@ PyTypeObject实例化出:
 1. 内存结构体: PyVarObj + allocated + *ob_item (头部固定3+2字)  
 2. 常用操作：增append,insert, concat, +, *, 删remove, pop，改=, 查[], index  
 3. ob_item指针数组动态扩容：  
-  > list_reisize: 增长模型 new_size + new_size//8 + (new_size<9)3:6，❓❓（0, 4, 8, 16...怎么来），PyMem_alloc  
+  > list_reisize: 增长模型 new_size + new_size//8 + (new_size<9)3:6，PyMem_alloc  
+  > ![image](https://github.com/user-attachments/assets/6153d434-9f9c-4c09-a263-21caeb96f13c)  ❓❓（0, 4, 8, 16...怎么来），  
   > list_ass_slice: 对内存上区间数据进行修改，删除即前插(O(n))，或者直接该值，会释放对象
 
 4. append: 检查，resize，引用，setItem
