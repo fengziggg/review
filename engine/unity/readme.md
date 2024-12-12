@@ -1,3 +1,8 @@
+practiceNote：  
+Unity生命周期  
+animation相关  
+
+
 ##### 1.随机地图
 
 ---
