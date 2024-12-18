@@ -14,7 +14,14 @@
 
 #### 跳表(Allco??):
 
-#### 十字链表：
+#### 图：  
+https://www.cnblogs.com/BigJunOba/p/9247682.html  
+https://github.com/LtLei/articles/blob/master/data_structure_and_algorithm/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B9%8B%E5%9B%BE%E7%9A%84%E6%A6%82%E5%BF%B5%E5%92%8C%E5%AD%98%E5%82%A8.md  
+> 邻接矩阵
+> 邻接表  
+> 十字链表
+> ![image](https://github.com/user-attachments/assets/c7c12a8e-d485-413c-8971-ae9126da1077)
+
 
 #### 堆，二叉堆，fab堆：
 
