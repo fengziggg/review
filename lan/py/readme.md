@@ -138,5 +138,6 @@ encode/decode
 
 pickle  ❓❓
 
+关于闭包的定义❓❓
 
 
