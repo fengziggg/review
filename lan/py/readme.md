@@ -138,6 +138,8 @@ encode/decode
 
 pickle  ❓❓
 
+import local? global??
+
 关于闭包的定义❓❓
 
 
