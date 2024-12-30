@@ -106,5 +106,7 @@ PyTypeObject实例化出:
 ![d870fba9c1f6a8283f64d7b475679d0](https://github.com/user-attachments/assets/0bf56bd1-2713-4e52-931c-2204c55c9c55)  
 真正的指令执行者都是codeObj
 
+----
+##### 类
 
 
