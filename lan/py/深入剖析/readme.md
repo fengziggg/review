@@ -122,6 +122,11 @@ def：yield标志编译时区分，生成genObj，附带悬空frameObj
 send/next：载入data到frameobj栈顶，frameObj入链，执行frameobj  
 yield：断链，跳出frameobj指令流，返回值  
 
+async：有await的或者转化genObj用途  
+await：yield from 或者 while/yield/send，最底层还是yield(await Obj)，是最底层awaitObj的上层中介，**一个是下达执行到yield，一个是穿透回顶层**，单纯yield while不一定有穿透会顶层的作用看自己实现  
+> ret = await xxx❓, ret = awaitObj.send() ❓
 
+基于多路复用IO(epoll)的事件系统：用于调度协程；协程解决job对线程/进程的阻塞问题本质还是靠逻辑分块，这个时候协程是语法糖层次的东西  
+事件循环系统demo:   
 
 
