@@ -115,6 +115,13 @@ mro: py3深度优先，C3算法❓
 重载元类对象和构造函数，介入**类型对象实例化**过程，类型对象实例化关乎实例对象的属性定义，如属性定义，检查
 重载new介入**实例对象实例化**过程(类型对象的静态函数)
 
+----
+##### generator  
+作用：节省内存，异步  
+def：yield标志编译时区分，生成genObj，附带悬空frameObj  
+send/next：载入data到frameobj栈顶，frameObj入链，执行frameobj  
+yield：断链，跳出frameobj指令流，返回值  
+
 
 
 
