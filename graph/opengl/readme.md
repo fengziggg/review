@@ -13,6 +13,8 @@
 2. ##### 设置状态：  
 应该是对应渲染管线的drawCall，每一次drawCall都是要**加载**一个渲染对象的所有东西，**设置**最新的动态状态(Uniform，Parameter)，然后执行渲染命令(DrawElemnt)
 
+![image](https://github.com/user-attachments/assets/d74b794e-42b1-470f-89ea-cd210e87b62f)
+
 
 ----
 
