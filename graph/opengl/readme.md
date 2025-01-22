@@ -19,8 +19,9 @@
 ----
 #### 变换：  
 向量矩乘M(行矩阵)*N(列矩阵)：接口对齐d(行向量) == d(列向量)，然后就是将列矩阵投影到行向量坐标系构成的空间，新空间的维度是行向量的数目  
+旋转矩阵，缩放矩阵，变换矩阵...  
 齐次坐标系：x, y, z, w，提供一个冗余w供xyz进行加和的功能(常数项)，齐次项如果是0就是方向，非0就是一个点？？  
-![image](https://github.com/user-attachments/assets/7ab52bc4-e3b4-4577-96f9-56f7e5838f90)
+![image](https://github.com/user-attachments/assets/7ab52bc4-e3b4-4577-96f9-56f7e5838f90)  
 stbi的特殊编译导致没法在多个cpp复用...  
 
 ----
