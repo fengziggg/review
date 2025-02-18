@@ -61,3 +61,5 @@ glm::mat4 proj = glm::perspective(glm::radians(45.0f), (float)width/(float)heigh
 坐标在vshader和fshader:gl_fragcoord??  
 
 uniform color归一化时机
+
+预乘  
