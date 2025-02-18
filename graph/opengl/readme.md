@@ -12,6 +12,16 @@
 
 2. ##### 设置状态：  
 应该是对应渲染管线的drawCall，每一次drawCall都是要**加载**一个渲染对象的所有东西，**设置**最新的动态状态(Uniform，Parameter)，然后执行渲染命令(DrawElemnt)
+环绕状态 :  
+```  
+  glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT)
+  glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT)
+```  
+缩放状态/多级渐远mipmap(复合状态，放大或者分辨率低适合linear，缩小或者分辨率超了适合neareast)：  
+```
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+```
 
 ![image](https://github.com/user-attachments/assets/d74b794e-42b1-470f-89ea-cd210e87b62f)
 
@@ -22,7 +32,8 @@
 旋转矩阵，缩放矩阵，变换矩阵...  
 齐次坐标系：x, y, z, w，提供一个冗余w供xyz进行加和的功能(常数项)，齐次项如果是0就是方向，非0就是一个点？？  
 ![image](https://github.com/user-attachments/assets/7ab52bc4-e3b4-4577-96f9-56f7e5838f90)  
-stbi的特殊编译导致没法在多个cpp复用...  
+stbi的特殊编译导致没法在多个cpp复用，设置cpp文件排除编译了...  
+❓万向锁和四元素  
 
 ----
 
