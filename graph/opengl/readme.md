@@ -35,6 +35,26 @@
 stbi的特殊编译导致没法在多个cpp复用，设置cpp文件排除编译了...  
 ❓万向锁和四元素  
 
+
+----
+#### 空间坐标：  
+- 局部坐标(空间) * Model(模型变化) ==> 世界坐标(空间) * view(**视角**变换) ==> 视角坐标(空间) * proj(投影矩阵) ==> 裁剪坐标(裁剪空间,到此转化为**NDC**) [gl自动进行**视口**变换 ==> 屏幕空间]  
+> localPos -> MODEL -> worldPos -> VIEW -> viewPos -> PROJ -> clipPos(NDC, 抛弃频幕外) [-> VIEWPORT -> screen]  
+> 这是在vs的流程中，不涉及fs流程，转化ndc的时候会抛弃屏幕外顶点即修改了渲染的三角图元的顶点(只有屏幕范围内包含在渲染范围)   
+> 抛弃顶点不等于双面渲染，面剔除那些  
+
+- 投影矩阵：  
+```
+glm::mat4 proj = glm::perspective(glm::radians(45.0f), (float)width/(float)height, 0.1f, 100.0f);
+```
+> 正交投影运算是直接用边界判断  
+> 投影矩阵的运算逻辑：  
+
+- 右手坐标系：  
+ >![image](https://github.com/user-attachments/assets/e93ac565-4a35-4490-8a9e-9435e4ce3cce)
+
+![image](https://github.com/user-attachments/assets/ca1ce044-71af-4f43-8242-6319ae9c5039)
+
 ----
 
 管线各个阶段：坐标变化所在vshader各个阶段，剔除所在阶段  
