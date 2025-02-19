@@ -61,6 +61,14 @@ glm::mat4 proj = glm::perspective(glm::radians(45.0f), (float)width/(float)heigh
 model是 Trans*Scale*Localpos  ==> WorldPos  
 view是  -(Scale)*(-Trans)*WorldPos ==> ViewPos，这个过程是先位移在旋转，旋转是摄像机的本地旋转  
 所以摄像机需要两个参数pos和dir，也习惯用pos和eye，lookAt矩阵就是[(Scale) * (-Trans)]  
+摄像机坐标系: Cross(Front, WroldUp)得到Right，Cross(Front, Rgith)得到CamUp，施密特正交  
+施密特正交：  
+>> 空间内一组向量可以表示一个子空间，那么可以有这组向量得到该子空间的正交基，两个不共线向量就可以根据投影得到基于其中一个向量的另一个垂向量，第三个向量又可以和前两个**正交基**投影得到第三个正交基，以此类推
+>> 投影只是得到合适的做差长度，真正分量的产生是在做向量差上得到  
+>> 正交基不唯一，根据第一个向量不同而不同，摄像机坐标系就是根据Front得到的正交基  
+>> ![image](https://github.com/user-attachments/assets/11961049-2871-461a-8cd6-988388020d93)
+>> 正交基yn, α假设为y1，绿色向量β为α的正交基y2向量，黄色为与α，β分别投影后得到的y3  
+>> up对于front来说是一个非共线向量而已，所以pitch不能是+-90°  
 
 ----
 
