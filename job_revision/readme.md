@@ -194,8 +194,11 @@
       > > 3. HexSize沿着已有Zone的集合外围随机扩充一个Hex生成，算法结束则Zone是个无环联通图，两个Zone相互接壤  
       > > 4. 根据配置按对应Zone的CircleRate对区域内的无环联通图进行加环  
 
-      > Tile图生成
-      > 
+      > Tile图生成  
+      > - Tile的主要属性有Pos，归属Hex，归属Zone(Hex可能归属多个Zone混合情况)，状态(protect，blk，)  
+      > > 1. 按配置的TileSize初始TileMap，并根据生成的Hex图初始化有效的Tile集合(陆地)  
+      > > 2. 统计Tile图的外轮廓，随机增加或腐蚀或增加，产生不规则表现  
+      > > 3. Tile
       
       
       > Config全局配置内容：  
