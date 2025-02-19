@@ -1,3 +1,4 @@
+### Chart1  
 #### 纹理：  
 数据加载 + loop:设置状态+render  
 1. ##### 数据加载:  
@@ -71,6 +72,11 @@ view是  -(Scale)*(-Trans)*WorldPos ==> ViewPos，这个过程是先位移在旋
 >> up对于front来说是一个非共线向量而已，所以pitch不能是+-90°  
 
 ----
+---- 
+
+### Chart2  
+#### Color  
+看到的颜色是 light*matReflect(或者说1-matAbsorb)  
 
 管线各个阶段：坐标变化所在vshader各个阶段，剔除所在阶段  
 坐标在vshader和fshader:gl_fragcoord??  
