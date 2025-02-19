@@ -77,6 +77,10 @@ view是  -(Scale)*(-Trans)*WorldPos ==> ViewPos，这个过程是先位移在旋
 ### Chart2  
 #### Color  
 看到的颜色是 light*matReflect(或者说1-matAbsorb)  
+![image](https://github.com/user-attachments/assets/a5835806-d39f-48f6-9840-c1e78d8eb199)  
+
+---
+
 
 管线各个阶段：坐标变化所在vshader各个阶段，剔除所在阶段  
 坐标在vshader和fshader:gl_fragcoord??  
