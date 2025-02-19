@@ -56,6 +56,13 @@ glm::mat4 proj = glm::perspective(glm::radians(45.0f), (float)width/(float)heigh
 ![image](https://github.com/user-attachments/assets/ca1ce044-71af-4f43-8242-6319ae9c5039)
 
 ----
+#### 摄像机：  
+主要改变view矩阵，proj的fov  
+model是 Trans*Scale*Localpos  ==> WorldPos  
+view是  -(Scale)*(-Trans)*WorldPos ==> ViewPos，这个过程是先位移在旋转，旋转是摄像机的本地旋转  
+所以摄像机需要两个参数pos和dir，也习惯用pos和eye，lookAt矩阵就是[(Scale) * (-Trans)]  
+
+----
 
 管线各个阶段：坐标变化所在vshader各个阶段，剔除所在阶段  
 坐标在vshader和fshader:gl_fragcoord??  
