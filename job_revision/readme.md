@@ -175,6 +175,7 @@
       地图分类：静态地图(专门的资源制作团队(策划，美术，或者两者配合)出的静态资源)，全动态随机地图(饥荒，H4)，折中(一些静态资源+一些动态逻辑堆叠)  
       参考：英雄之时，H3地图论文，redblob  
       相关知识：noice，维诺图
+      其他实现思路：
       H4实现思路：
       > 1. UML：Zone，Hex，Tile，Config (图)  
       > 2. 高频算法：寻路，元胞生成，坐标转换  
@@ -195,11 +196,25 @@
       > > 4. 根据配置按对应Zone的CircleRate对区域内的无环联通图进行加环  
 
       > Tile图生成  
-      > - Tile的主要属性有Pos，归属Hex，归属Zone(Hex可能归属多个Zone混合情况)，状态(protect，blk，)  
+      > - Tile的主要属性有Pos，归属Hex，归属Zone(Hex可能归属多个Zone混合情况)，状态(状态转移方程[norm, blk, prot] | [0， visit, unit])  
+      > - Tile阶段主要任务两个：初始化Tile的基础基础轮廓和State[norm, blk, prot]， 根据Hex信息和Tile实际轮廓统计出一些放置锚点(Hex顶点，边缘中点，中心点等的范围搜索后的有效点)   
+      > - 初始化轮廓和基础State的实现：  
       > > 1. 按配置的TileSize初始TileMap，并根据生成的Hex图初始化有效的Tile集合(陆地)  
       > > 2. 统计Tile图的外轮廓，随机增加或腐蚀或增加，产生不规则表现  
-      > > 3. Tile
-      
+      > > 3. Tile统计Hex边界内轮廓，随机腐蚀增厚，并标记blk  
+      > > 4. 根据Hex联通关系，寻路出Tile通路标记prot(覆盖blk)  
+      > > 5. 状态转移方程中同级别间是相互覆盖的，(优先级设置不是通过数值大小来判断，优先级大于或小于不够满足)，且[norm,blk,prot]在这个阶段就初始化完后面不会再出现不用考虑跟[visit,unit]覆盖的优先级关系，本身优先逻辑简单所以直接prot覆盖blk覆盖norm  
+      > > 6. 一共有(nrom,0), (nrom,visit), (norm, unit), (blk, 0), (blk, visit), (blk, unit), (prot, 0), (prot, visit), (prot, unit)九种可能的情况(全集)  
+      > > 7. 初始是(x, 0)三种，测试visit的时候只有(norm, 0), (prot, 0)可以覆盖并产生新的(norm, visit), (prot, visit)，注意(X, visit)本身不再测试通过范围即visit之间本身互斥    
+      > > 8. 测试unit的时候只有(norm, 0), (blk, 0)，(norm, unit), (blk, unit)可以覆盖,由初始条件会产生新的(norm, blk), (blk, unit)  
+      > > 9. 所以最终合法的只有(norm, 0), (blk, 0),(prot, 0),(norm, visit), (prot, visit),(norm, blk), (blk, unit) 七种   
+      > > 10. 测试的时候可能是按单个tile进行，也可能是按某个Tile集合(unit覆盖多个Tile)并按all条件进行测试  
+      > - 放置锚点计算：  
+      > > 1. 用Hex的空间转化公式(见Hex基础换算相关)转为世界坐标再转为Tile坐标，Tile按范围搜索区域内随机一可用点作为候补锚点  
+      > > 2. 搜索是因为Hex换算后的点往往状态被设置为不可放置的状态  
+
+      > 功能单元放置
+      > - 上述流程之后会得到带有基础state(norm, blk, prot)的Tile，Hex连同信息
       
       > Config全局配置内容：  
       > > 轮廓腐蚀度
@@ -211,6 +226,7 @@
       > > Zone联通关系成对生成，选中的Zone对的时序导致的一些不合理，先发育的会先挤占空间，后发育的会先发育好的Zone驱赶导致可能出现大环路  
       > > 复杂的Zone连通关系(一个区域有多个联通)或者Zone的HexSize配置可能导致生成失败，比如某个联通Zone较后被选中，且因为被先选中的邻接Zone先发育挤占了自己的发育空间导致发育失败(极端就是没发育就被包围了)
       > > 上述两个问题可能的改进是1.用维诺图而不是规整六边形(带来空间换算压力)，2.每个Zone与其余Zone根据size自适应的控制各自的分布位置的算法
+      > > 超大规模地图生成问题...
 
 
     - 渲染TileMap                                
