@@ -106,6 +106,21 @@ view是  -(Scale)*(-Trans)*WorldPos ==> ViewPos，这个过程是先位移在旋
 ![image](https://github.com/user-attachments/assets/a5835806-d39f-48f6-9840-c1e78d8eb199)  
 
 ---
+#### light  
+vs空间与fs空间  
+1. 在vs和fs中传递的in out，要留意fs的都是vs的有限个顶点数据(任何顶点数据，所有通过out传递的，包括中间的自定义辅助数据都是与该顶点绑定)的插值后的光栅数据  
+  > 所以fs依赖到顶点的数据要考虑：拿差值后的数据进行处理**func(Lerp(data))** 与 在顶点空间处理完后的数据自动插值过来**Lerp(func(data))** 是否等价  
+2. 法线在model变换后需要修正，model非等比例变化后，法线也跟着变的情况下数据也不对，法线不变的情况下(原法线)也不对，得用**原法线**进行另一个model_norm（tranpos(inverse(M))）变换  
+
+phong模型：  
+都是反射光乘以比例再叠加来贡献最终光，然后再light * color  
+1. ambient 固定比例  
+2. diff 与光源位置和每个顶点位置和法线有关，比例系数就是夹角： dirLight * norm   
+3. spec 在diff的基础上再与视角有关，比例系数是反射向量与视线向量的夹角，再用指数进行扩大：pow(reflect(dirLight, nrom) * eyeDir)  
+4. fragColor = (fact_ambient + fact_diff + fact_spec) * dirColor * objColor  
+![image](https://github.com/user-attachments/assets/ca2888a2-ebf1-4c3f-98c8-467e21b444c1)
+
+---
 
 
 管线各个阶段：坐标变化所在vshader各个阶段，剔除所在阶段  
