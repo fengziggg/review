@@ -121,7 +121,12 @@ phong模型：
 ![image](https://github.com/user-attachments/assets/ca2888a2-ebf1-4c3f-98c8-467e21b444c1)
 
 ---
+#### mat  
+进一步拓展，最终渲染颜色：三种成分反射光的比例，三种成分光的角度投影系数，三种光成分固定系数(材质)  
+light[3 vec3] * mat[3 vec3] * rat[3 float]   
+![image](https://github.com/user-attachments/assets/0f3925af-3e93-41b0-929b-37092368d7e2)  
 
+---
 
 管线各个阶段：坐标变化所在vshader各个阶段，剔除所在阶段  
 坐标在vshader和fshader:gl_fragcoord??  
