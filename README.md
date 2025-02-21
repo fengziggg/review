@@ -22,7 +22,7 @@ unity，cocos源码，py源码
 review完善，简历起草  
 面经  
 **不限时自行安排内容**  
-og/demo/unity  
+og/demo(ECS模式+蓝图)/unity  
 **基础回顾**  
 数据结构/设计模式
 
