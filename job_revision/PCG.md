@@ -25,7 +25,7 @@ https://www.youtube.com/c/SebastianLague
   > 3. HexSize沿着已有Zone的集合外围随机扩充一个Hex生成，算法结束则Zone是个无环联通图，两个Zone相互接壤  
   > 4. 根据配置按对应Zone的CircleRate对区域内的无环联通图进行加环  
 
-- T3. ile图生成  
+- 3. Tile图生成  
   - Tile的主要属性有Pos，归属Hex，归属Zone(Hex可能归属多个Zone混合情况)，状态(状态测试表[norm, blk, prot/road， visit, unit])  
   - Tile阶段主要任务两个：初始化Tile的基础基础轮廓和State[norm, blk, prot/road]， 根据Hex信息和Tile实际轮廓统计出一些放置锚点(Hex顶点，边缘中点，中心点等的范围搜索后的有效点)
         
