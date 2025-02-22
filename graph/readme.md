@@ -1,5 +1,6 @@
 - early-z  
 - LUT
+- HSR，渲染路径DR，TBDR...
 - LoD，minmaps是纹理的Lod
   > 整个资产的多方案，顶点，纹理
   > 纹理相关的Lod就是Minmap
@@ -10,3 +11,4 @@
 - fs的片元和像素
   > fs的偏远是一个颜色单位对象，经过一些列处理(alpht, depth, stencil ...)才会输出为像素,有的可能中途就被丢弃，是候选像素
   > 片元也有提前剪枝，背面剔除，各种测试，early-z
+- 材质相关  
