@@ -25,3 +25,10 @@ writeDepth/testDepth
  
 2024/11/29
 ![image](https://github.com/user-attachments/assets/3089b617-c39a-4d48-ae0c-f6810df8c73f)
+
+
+----
+2025/2/23  
+cmake用vs2017编译cocos2dx v4  
+还没有尝试编译py进去  
+![image](https://github.com/user-attachments/assets/e08af67f-386a-408a-ac15-709bf47bdac8)
