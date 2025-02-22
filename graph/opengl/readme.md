@@ -122,11 +122,17 @@ phong模型：
 
 ---
 #### mat  
-进一步拓展，最终渲染颜色：三种成分反射光的比例，三种成分光的角度投影系数，三种光成分固定系数(材质)  
+进一步拓展，最终渲染颜色：三种成分反射光的比例，三种成分光的角度投影系数，三种光成分固定系数(材质)*物体反色颜色  
 light[3 vec3] * mat[3 vec3] * rat[3 float]   
 ![image](https://github.com/user-attachments/assets/0f3925af-3e93-41b0-929b-37092368d7e2)  
 
 ---
+#### diffusee mat  
+物体反射颜色和三种光模式常量系数统一纳入一个材质表征：即材质是objColor*strengthness  
+![image](https://github.com/user-attachments/assets/97b58e21-d94b-486d-b17b-e5af192b03bf)
+
+--- 
+
 
 管线各个阶段：坐标变化所在vshader各个阶段，剔除所在阶段  
 坐标在vshader和fshader:gl_fragcoord??  
