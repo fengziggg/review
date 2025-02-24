@@ -1,9 +1,10 @@
 #### 后处理：
   
   - 暗角
-    > 
+    计算uv距离中心的距离，平方化(变成曲线)后被1减去来设置上限为0，乘上系数(二次函数A)再Saturate阶段控制亮区范围和指数变换进行扩散，随后采样  
+    ![image](https://github.com/user-attachments/assets/b2d609a8-84de-4136-bee3-21507507d14d)
   
-  - LUT
+  - LUT  
     https://zhuanlan.zhihu.com/p/623210058  
     https://hello-david.github.io/archives/f116047e.html
     https://zhuanlan.zhihu.com/p/604897964  
