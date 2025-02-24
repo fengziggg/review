@@ -1,5 +1,4 @@
-- early-z
-- 后处理：
+#### 后处理：
   
   - 暗角
     > 
@@ -14,7 +13,7 @@
     > ![image](https://github.com/user-attachments/assets/036017ca-c3ae-458b-a8e7-128445f5ee00)
 
 
-
+- early-z
 - HSR，渲染路径DR，TBDR...
 - LoD，minmaps是纹理的Lod
   > 整个资产的多方案，顶点，纹理
