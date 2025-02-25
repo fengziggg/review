@@ -424,13 +424,16 @@
        2. Unit(Barr,Deco,unit,特效): Obj-Cam + NoDepthTest批次，空间位置进行区分
        3. 透明操作层：UI-Cam + UI批次(localZ控制)
        4. 表层UI：UI-Cam + UI批次(localZ)
-          
+       5. ![1740483252529](https://github.com/user-attachments/assets/ca774e3c-fc72-458f-9b78-85e49daaf78f)
+
      - 战场(ObjCamera：透视摄像机固定俯视角， UICamera：正交摄像机)：  
        1. 场景地表: Obj-Cam + transparent批次
        2. 地表网格绘制：Obj-Cam + UI批次
        3. 单元(阻挡装饰，陷阱特效，建筑单元，角色单元)：Obj-Cam + 2/3d混合批次(已经没有2D内容了只是为了提高批次)
        4. 透明操作层：UI-Cam + UI批次(localZ控制)
        5. 表层UI：UI-Cam + UI批次(localZ)
+       6. ![image](https://github.com/user-attachments/assets/9aa9f394-6939-43da-b017-2ab450b5871d)
+
 
 其他：
 uml：
