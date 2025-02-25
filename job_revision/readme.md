@@ -411,16 +411,26 @@
 
 - 场景绘制逻辑
   1. 渲染管线绘制顺序分类：GZ-， opaque， transparent， UI，2/3混合(被3D包围且SetIsNoDepthTest)， GZ+
-  2. 三个摄像机：Obj， UI
+     > 摄像机次序直接决定绘制批次(覆盖)
+     > 同一摄像机内，先opaqut，再transparnet，再UI，再2/3混合
+     > opaque写深度测深度(都只用于静态背景类)，transparent只测深度不写，2/3d混合按**obj锚点的距离**排序绘制，只测不写
+     > 总体渲染逻辑：背景内容之间，动态单元与背景之间有正常的穿插表现；同unit之间是按距离覆盖**不给穿模**(有2D)
+     
+  2. 两个摄像机：Obj， UI
+  
   3. 绘制实例：  
-     - 战略地图(ObjCamera， UICamera)：  
-       1. Terrain(Tile/Water): Obj-Cam + UI批次
-       2. Unit(Barr,Deco,unit): Obj-Cam + NoDepthTest批次，空间位置进行区分
+     - 战略地图(ObjCamera， UICamera，都是正交摄像机)：  
+       1. Terrain(Tile/Water，气泡对话框，鼠标指示器等): Obj-Cam + UI批次
+       2. Unit(Barr,Deco,unit,特效): Obj-Cam + NoDepthTest批次，空间位置进行区分
        3. 透明操作层：UI-Cam + UI批次(localZ控制)
        4. 表层UI：UI-Cam + UI批次(localZ)
-     - 战场(ObjCamera， UICamera)：
-       1. 
-    
+          
+     - 战场(ObjCamera：透视摄像机固定俯视角， UICamera：正交摄像机)：  
+       1. 场景地表: Obj-Cam + transparent批次
+       2. 地表网格绘制：Obj-Cam + UI批次
+       3. 单元(阻挡装饰，陷阱特效，建筑单元，角色单元)：Obj-Cam + 2/3d混合批次(已经没有2D内容了只是为了提高批次)
+       4. 透明操作层：UI-Cam + UI批次(localZ控制)
+       5. 表层UI：UI-Cam + UI批次(localZ)
 
 其他：
 uml：
