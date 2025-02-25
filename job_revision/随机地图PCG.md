@@ -6,6 +6,12 @@ https://www.bilibili.com/video/BV1Lr4y1X7JR/?spm_id_from=333.337.search-card.all
 https://www.youtube.com/c/SebastianLague  
 
 ---
+#### 噪声知识：
+https://github.com/Auburn/FastNoiseLite
+https://bio-spring.top/post/2025/01/04/perlin-noise/
+https://huailiang.github.io/blog/2021/noise/
+
+---
 #### H4随机地图细节：  
 1. UML：Zone，Hex，Tile，Config (图)  
 2. 高频算法：寻路，元胞生成，坐标转换  
