@@ -132,6 +132,12 @@ light[3 vec3] * mat[3 vec3] * rat[3 float]
 ![image](https://github.com/user-attachments/assets/97b58e21-d94b-486d-b17b-e5af192b03bf)
 
 --- 
+#### light cast  
+光颜色 * 光源类型的衰减系数 * 物体颜色 * 光照模型三组分的夹角系数  
+光源衰减系数：  
+> 光源类型：平行光，点光源(1/dist^2 反平方比公式)，聚光(片元光线与聚光中心方向夹角系数)  
+> 与光源类型，**光源距离**，**光源中心朝向相关**  
+![image](https://github.com/user-attachments/assets/c5ae5cc5-456e-4d52-aa75-0ac662781acb)
 
 
 #### 阴影 
