@@ -7,9 +7,9 @@ https://www.youtube.com/c/SebastianLague
 
 ---
 #### 噪声知识：
-https://github.com/Auburn/FastNoiseLite
-https://bio-spring.top/post/2025/01/04/perlin-noise/
-https://huailiang.github.io/blog/2021/noise/
+https://github.com/Auburn/FastNoiseLite  
+https://bio-spring.top/post/2025/01/04/perlin-noise/  
+https://huailiang.github.io/blog/2021/noise/  
 
 ---
 #### H4随机地图细节：  
