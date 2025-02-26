@@ -14,7 +14,8 @@ unity，cocos源码，py源码
 0：练手，og  
 1：完善review*3，深挖*2，复习内容对照补充(cocosbook，py)*1  
 2：cocos2dx*1，cocoscreator*1，设计模式 * 1，数据结构 * 1，entt * 1， gameplay * 1，算法回顾 * 1  
-最大问题案例，最有印象业绩，cocos结构，py底层回顾和面经
+
+回顾review全文，最大问题案例，最有印象业绩，cocos结构，py底层回顾和面经
 
 ---
 2025/2/16-  
@@ -28,4 +29,4 @@ og/demo(ECS模式+蓝图)/unity
 数据结构/设计模式
 
 ---
-demo: worley分型，meshTerr
+demo:，meshTerr
