@@ -1,3 +1,5 @@
+https://www.cnblogs.com/onepixel/p/7674659.html
+
 ### 定义：
 1. ADT：
 2. 数据+关系(运算)+存储
