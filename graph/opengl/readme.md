@@ -139,6 +139,17 @@ light[3 vec3] * mat[3 vec3] * rat[3 float]
 > 与光源类型，**光源距离**，**光源中心朝向相关**  
 ![image](https://github.com/user-attachments/assets/c5ae5cc5-456e-4d52-aa75-0ac662781acb)
 
+---
+#### assimp
+模型加载，主要就是用这个库读取数据然后自行拆解数据出来用  
+资源/场景一般会尽量包含多的数据：节点，网格，顶点，索引，纹理，贴图内容，甚至摄像机  
+assimp的逻辑是场景存node，mesh，mat，然后node指向mesh，mesh指向mat  
+assimp库最新的已经更教程不一致了(25/2/28)，编译出来后lib和dll不再同一个地方(都要放exe目录)，然后include不全src和编译工程各一些，都要放一起  
+dll：动态运行，不编入exe里面； lib：如果是dll的则lib只是充当指引dll位置和里面函数位置的指引文件，如果是单纯静态库则是数据和代码会被编入exe；.h是都要的  
+![image](https://github.com/user-attachments/assets/d9528094-0587-47a4-9fc7-3a51077b88d1)
+![image](https://github.com/user-attachments/assets/af1229d5-a68a-4bb4-a01a-ec6372b35c37)  
+
+
 
 #### 阴影 
 阴影就是对两个视角的深度图的时差片元加一些阴暗表现  
