@@ -19,6 +19,14 @@ unity，cocos源码，py源码
 回顾review全文(做过内容补充), cocos结构 **√**;  /  最大问题案例，最有印象业绩，py底层回顾和面经，多线程，协程 🚫   
 
 ---
+2025/3/2 -   
+0: unity知识(entt/gameframe/ugui) + c#八股 * 6
+1: unitydemo * 6
+2: review深挖：性能![icon_sound](https://github.com/user-attachments/assets/1e5c260a-f280-4b23-a9b6-d9bb43a0e843)
+优化*1，地图*1，渲染*3，综合优化*1
+*：og，cocosbook笔记补充，py底层回顾，py练手(多线程/协程)，cocos2dx-demo，c+
+
+---
 2025/2/16- 
 **八点前截至**  
 练手py, 练手algo  
@@ -27,7 +35,7 @@ review完善，简历起草
 **不限时自行安排内容**  
 og/demo(ECS模式+蓝图)/unity  
 **基础回顾**  
-数据结构/设计模式
+数据结构/设计模式 **(√)**
 
 ---
 demo:，meshTerr
