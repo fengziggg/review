@@ -11,14 +11,14 @@ opengl，101作业，八股文  🚫
 unity，cocos源码，py源码
 
 ---  
-0：练手，og  
-1：完善review*3，深挖*2，复习内容对照补充(cocosbook，py)*1  
-2：cocos2dx*1，cocoscreator*1，设计模式 * 1，数据结构 * 1，entt * 1， gameplay * 1，算法回顾 * 1  
-
-回顾review全文(做过内容补充)，最大问题案例，最有印象业绩，cocos结构，py底层回顾和面经，多线程，协程
+2025/2/20 - 2025/3/1
+0：练手，og  **部分**
+1：完善review*3 **(√)**，深挖*2 🚫 ， 复习内容对照补充(cocosbook，py)*1  🚫 
+2：cocos2dx*1，设计模式 * 1，数据结构 * 1，算法回顾 * 1  **(√)**;  /  cocoscreator*1，entt * 1， gameplay * 1 🚫  
+回顾review全文(做过内容补充), cocos结构 **√**;  /  最大问题案例，最有印象业绩，py底层回顾和面经，多线程，协程 🚫  
 
 ---
-2025/2/16-  
+2025/2/16- 
 **八点前截至**  
 练手py, 练手algo  
 review完善，简历起草  
