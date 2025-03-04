@@ -40,3 +40,5 @@ og/demo(ECS模式+蓝图)/unity
 demo:，meshTerr
 
 http/socket/跨域
+
+补充：lw的开发生命周期细节
