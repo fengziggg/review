@@ -20,7 +20,7 @@ unity，cocos源码，py源码
 
 ---
 2025/3/2 -   
-0: unity知识(entt/gameframe/ugui) + c#八股 * 6  
+0: unity知识(entt/gameframe/ugui/u3d面经(扫盲)) + c#八股 * 6  
 1: unitydemo * 6  
 2: review深挖：性能优化*1，地图*1，渲染*3，综合优化*1  
 *：og，cocosbook笔记补充，py底层回顾，py练手(多线程/协程)，cocos2dx-demo，c+  
