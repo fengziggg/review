@@ -26,9 +26,17 @@ unity，cocos源码，py源码
 *：og，cocosbook笔记补充，py底层回顾，py练手(多线程/协程)，cocos2dx-demo，c+  
 
 3.4：  
-- unity基础+unity核心篇幅学习+练手：https://blog.csdn.net/weixin_53163894/category_12208548.html    
+- unity基础+unity核心篇幅学习 https://blog.csdn.net/weixin_53163894/category_12208548.html **√**，练手 🚫   
+- c#中级篇学习：https://learn.u3d.cn/tutorial/intermediate-gameplay-scripting?chapterId=63562b2bedca72001f21d33f#60408a76141da10020320554  🚫   
+- review深挖 **(√)**  
+- 面经：https://zhuanlan.zhihu.com/p/633988852 🚫    
+- og 🚫
+
+3.5:
+- unity练手 + 进阶部分 https://blog.csdn.net/weixin_53163894/category_12208548.html  
+- review深挖 
+- unity pcg demo  
 - c#中级篇学习：https://learn.u3d.cn/tutorial/intermediate-gameplay-scripting?chapterId=63562b2bedca72001f21d33f#60408a76141da10020320554    
-- review深挖  
 - 面经：https://zhuanlan.zhihu.com/p/633988852  
 - og  
 
