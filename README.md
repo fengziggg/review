@@ -33,13 +33,21 @@ unity，cocos源码，py源码
 - og 🚫
 
 3.5:
-- unity练手 + 进阶部分 https://blog.csdn.net/weixin_53163894/category_12208548.html  
-- review深挖 
-- unity pcg demo  
-- c#中级篇学习：https://learn.u3d.cn/tutorial/intermediate-gameplay-scripting?chapterId=63562b2bedca72001f21d33f#60408a76141da10020320554    
-- 面经：https://zhuanlan.zhihu.com/p/633988852  
-- og  
+- unity练手 **(√)** + 进阶部分 https://blog.csdn.net/weixin_53163894/category_12208548.html 🚫   
+- review深挖 **(√)**  
+- unity pcg demo  🚫   
+- c#中级篇学习：https://learn.u3d.cn/tutorial/intermediate-gameplay-scripting?chapterId=63562b2bedca72001f21d33f#60408a76141da10020320554 🚫      
+- 面经：https://zhuanlan.zhihu.com/p/633988852 🚫    
+- og  **(√)**
 
+3.6：
+- unity练手 + 进阶部分 https://blog.csdn.net/weixin_53163894/category_12208548.html  
+- review深挖   
+- unity pcg demo
+- creator 
+- c#中级篇学习：https://learn.u3d.cn/tutorial/intermediate-gameplay-scripting?chapterId=63562b2bedca72001f21d33f#60408a76141da10020320554
+- og
+  
 ---
 2025/2/16- 
 **八点前截至**  
