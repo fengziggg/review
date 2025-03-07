@@ -34,5 +34,7 @@
 
 #### 材质相关  
 
+#### lightMap,lightProbe,体积光
+
 #### color:  
 https://zhuanlan.zhihu.com/p/129095380  
