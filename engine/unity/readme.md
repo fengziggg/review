@@ -1,7 +1,7 @@
 协程原理：unitask  
 四元数相关：**(√)**  
 probe
-自适应相关，u3d canvas
+自适应相关，u3d canvas **(√)**  
 
 ---
 一、Unity核心模块与技术体系
