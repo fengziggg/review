@@ -7,10 +7,10 @@ scrollRect(scrollbar):
 - content添加size filter更改content的size  
 
 回调代理的使用：  
-(param)=>{ 逻辑，可以用闭包变量; }  
-(param)=>FunctionCall(闭包变量)，这种也是委托    
-delegate(param){ 逻辑，可以用闭包变量; }  
-
+- (param)=>{ 逻辑，可以用闭包变量; }  
+- (param)=>FunctionCall(闭包变量)，这种也是委托    
+- delegate(param){ 逻辑，可以用闭包变量; }  
+- 用函数指针的形式显示定义delgate  
 
 ```
 using System.Collections;
