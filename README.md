@@ -65,9 +65,22 @@ unity，cocos源码，py源码
 - og 🚫
 
 3.9:
-- creator
-- 
-  
+- creator **(√)**   
+  > 入门小demo
+  > 面经相关学习
+  > ts相关学习
+- unity 🚫
+- review 🚫
+- pgc 🚫
+- c# 🚫
+- og 🚫
+
+3.10：
+- 回顾py对比学习ts
+- unity进阶部分 + 未知内容学习(probe，mat，pipeline)
+- creator练手+做笔记
+- pgc，og
+
 ---
 2025/2/16- 
 **八点前截至**  
