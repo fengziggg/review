@@ -7,3 +7,4 @@
 参考：
 - https://blog.csdn.net/lizhong2008/article/details/132858197
 - https://forum.cocos.org/t/topic/150536/12
+- https://ts.xcatliu.com/introduction/what-is-typescript.html
