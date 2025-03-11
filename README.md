@@ -21,9 +21,9 @@ unity，cocos源码，py源码
 ---
 2025/3/2 -  2025/3/10
 > (30/100)
-0: unity知识(entt/gameframe/ugui/u3d面经(扫盲)) **(1/2)** + c#八股 * 6 🚫  
+0: unity知识(ugui**(✅)**/entt/gameframe/u3d面经(扫盲)) **(1/2)** + c#八股 * 6 🚫  
 1: unitydemo * 6  🚫  
-2: review深挖：性能优化*1，**(✅) **地图*1，渲染*3，综合优化*1🚫.    
+2: review深挖：性能优化 * 1, **(✅)**  地图 * 1，渲染 * 3，综合优化 * 1  🚫     
 3：og **(1)**，cocosbook笔记补充，py底层回顾，py练手(多线程/协程)，cocos2dx-demo，c+ 🚫.
 4: creator * 1, ts*1 **(✅)**  
 
@@ -78,16 +78,25 @@ unity，cocos源码，py源码
 - og 🚫
 
 3.10：
-- 回顾py对比学习ts 🚫
-- unity进阶部分 + 未知内容学习(probe，mat，pipeline)
-- creator练手+做笔记
-- pgc，og
 
 ---
 2025/3/11-  
-3.11:
-- 
+- Unity基础完结，pcgdemo，【课程，U3D渲染知识】：6 * 8h
+- review 渲染相关(水体渲染,shadertoy实现)，【高质量半透，OG】：6 * 4h
+- 【c++/py练手】
 
+3.11:
+- 进阶部分基础 https://blog.csdn.net/weixin_53163894/category_12208548.html**(✅)**, unity练手🚫
+- pgc 🚫
+
+3.12:
+- Unity pgc*4
+- unity练手【课程快览，渲染相关】*4
+- 渲染相关完善*2(水体渲染【高质量半透】)
+- og [, py剖析+练手/c++]*1
+
+---
+u3d面经
 
 ---
 2025/2/16- 
