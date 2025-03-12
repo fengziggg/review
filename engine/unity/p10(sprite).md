@@ -5,3 +5,5 @@
   > meshtype??
 2. Advance: Mipmap相关
 3. WrapMode: 纹理重复截断设置
+
+![image](https://github.com/user-attachments/assets/b9c08f6e-46af-439d-8f3c-9380b993ed05)
