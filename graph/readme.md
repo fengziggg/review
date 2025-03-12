@@ -38,3 +38,6 @@
 
 #### color:  
 https://zhuanlan.zhihu.com/p/129095380  
+
+#### 各种着色模型：
+flat/phong/blingphong/...
