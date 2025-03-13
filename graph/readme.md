@@ -39,6 +39,11 @@
 #### color:  
 https://zhuanlan.zhihu.com/p/129095380  
 
+#### computeShader:
+复用gpu的并行算力资源：
+写shader：名字，输入输出参数RWStructBuffer/RWTexture2d，编写函数体，创建shader资产  
+unity脚本：shader.FindKernel找到目标函数，SetParam，Dispatch分配线程组
+
 #### 各种着色模型：
 flat/phong/blingphong/...
 
