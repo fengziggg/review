@@ -1,3 +1,4 @@
+#### 坐标tranasform
 2. 法线向量转换：UnityObjectToWorldNormal
     // 转换法线到世界空间
     float3 worldNormal = UnityObjectToWorldNormal(v.normal);
@@ -46,3 +47,17 @@
     TransformWViewToHClip
     摄像机空间→裁剪空间。
 
+---
+#### mat4
+1. Matrix4x4 的结构
+一个 Matrix4x4 包含16个浮点数，排列如下：
+| m00 m01 m02 m03 |
+| m10 m11 m12 m13 |
+| m20 m21 m22 m23 |
+| m30 m31 m32 m33 |
+    列主序：数据按列存储，即：
+        第1列：m00, m10, m20, m30
+        第2列：m01, m11, m21, m31
+        第3列：m02, m12, m22, m32
+        第4列：m03, m13, m23, m33
+    行主序：如果按行存储，顺序会不同，但Unity使用的是列主序。
