@@ -149,6 +149,12 @@ dll：动态运行，不编入exe里面； lib：如果是dll的则lib只是充�
 ![image](https://github.com/user-attachments/assets/d9528094-0587-47a4-9fc7-3a51077b88d1)
 ![image](https://github.com/user-attachments/assets/af1229d5-a68a-4bb4-a01a-ec6372b35c37)  
 
+---
+#### depthTest
+深度值在裁剪空间之后得到的归一化的z不是线性的，而是(1/z-1/near)/(1/far-1/near)，推导与投影矩阵z行的推导有关  
+z冲突：
+![image](https://github.com/user-attachments/assets/bc7d151e-e97e-4728-b021-b750759a37d5)
+
 
 
 #### 阴影 
