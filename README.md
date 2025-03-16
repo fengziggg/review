@@ -26,7 +26,7 @@ u3ddemo
 
 ---
 2025/3/17-  
-- ECS(ET，项目实现)
+- py/cocos复习,py面经
 - C+，py练手
 - og
 - 面经
