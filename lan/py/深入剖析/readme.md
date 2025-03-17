@@ -1,4 +1,4 @@
-#####1. C structure  
+##### 1. C structure  
 1. 结构体define(摸版):    
   - 类对象结构体定义: PyObject, PyVarObject, PyTypeObject  
   - 实例对象结构体定义: PyFloatObject, PyIntObject  
