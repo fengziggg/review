@@ -35,7 +35,7 @@ u3ddemo
 - u3d面经🔻
 
 3.18
-- (py绑定，协程，多线程，socket)
+- (py绑定✅，协程，多线程，socket)
 - py复习**(1/3)**
 - cocos复习,py面经
 - C+，py练手
