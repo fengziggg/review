@@ -10,6 +10,7 @@
 - ob_item数组表指针
 - ob_allocator目前划定的容量上限
 - ob_size已经分配的元素数量(PyVarObj_Head)
+  
 ![image](https://github.com/user-attachments/assets/c9ec89cf-3d14-4575-989d-c45bb60b6bb4)
 
 
