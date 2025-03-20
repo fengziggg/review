@@ -1,11 +1,15 @@
 #### List:
-切片  ？？
-PyMen_Reallocate  ？？
-Py_Decref ??
-
+源码补充：
+- 切片
+- PyMen_Reallocate
+- Py_Decref
+  
 动态扩容顺序表
 结构体：
-关键字段：ob_item数组表指针, ob_allocator目前划定的容量上限, ob_size已经分配的元素数量(PyVarObj_Head)
+关键字段：
+- ob_item数组表指针
+- ob_allocator目前划定的容量上限
+- ob_size已经分配的元素数量(PyVarObj_Head)
 ![image](https://github.com/user-attachments/assets/c9ec89cf-3d14-4575-989d-c45bb60b6bb4)
 
 
