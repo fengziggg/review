@@ -32,7 +32,7 @@ PyFloatObj: PY_OBJECT_HEAD, ob_fVa
 - ob_digital使用30位: 31位防止溢出丢失进位(直接掩码得到进位的)，30是为了和shot15位的情况兼容
 
 创建：
-- 小整数池：NSMALLPOSINT/NSMALLNEGINT, small_ints
+- 小整数池：NSMALLPOSINT/NSMALLNEGINT, small_ints，是个表结构但是int的值可以做下表随机访问
 
 操作：
 sign单独计算，a b两数绝对值结算且固定a > b， 然后转换为绝对值加减法 x_add/x_sub(borrow = a[i] - b[i] - borrow; borrow & mask; borrow >> longshit; borrow &= 1)
