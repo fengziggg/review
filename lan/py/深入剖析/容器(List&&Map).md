@@ -46,3 +46,40 @@ pop:
 remove:
   - for循环对比找到元素
   - 然后list_ass_slience删除
+
+
+---
+#### Map：
+底层：
+- hashMap
+- 可Hash对象：1. 不可变对象，2. hash值可以比较运算
+
+结构体：  
+![1742548386190](https://github.com/user-attachments/assets/90707b97-6d93-457a-903c-0239487a29b6)
+PyDictObject(只是个PyObject的主体结构引用住真正的KeyObject)：ma_keys（存储key表），ma_value（旧版字段可以忽略）  
+KeyObject(具体维持整个map的数据的表)：  
+- dk_indices(索引表，**不是被KeyObj引用而是直接分配在KeyObj上**)
+- dk_entries(entry结构体的引用，**直接顺序存在这个个对象的内存块尾部了**)
+- 一些容量描述字段：**dk_size**(分配的这个KeyObj的容量，也是本次的理论上限)，**dk_nentries**(应该是entry表的实际数目，包含了被占用的)，**dk_usable**(indices中的可用个数，用来判断是否触发边界)
+EntryObj：me_key, me_val, me_hash  
+
+**动态扩容**：
+- 与list不同，不是到达分配上限才会扩容，hash的分配位置不可预测，除了满了还有减少冲突，所以需要有一定的空余位置来减少空缺
+- **边界**: 所以resize边界是逻辑size的: size*1/3 < staticSize < size*2/3
+- **真假resie**: resize有真resize(indeces达到边界，重建索引mod会变和分配entrys内存快)，假resize(entry没变，重新分配了entrys内存快长度不变剔除废弃的)
+- **增长率**: 真resize按大小为2^n齐次幂分配newSize，且要让触发resize的**真实indice个数**(2/3*oldSize)在newSize的1/3之上防止死循环resize,一般是三倍(GROWTH_RATE)
+- 即初始8(2-5) -> 16(5-10) -> 32(10-20)...
+
+**删除条目**：
+- index槽位数据清空标记为dummy，但不能把槽位空出来，因为用线性探测的hash冲突决定的，但有后来人映射到这个key可以被他覆盖(只是不要留空中断探测)
+- entrys不进行回收，直接留着等待resize重新分配内存后，整理有效的ele然后整体复制过去
+- 所以这里entrys和index的数目不是完全同步的，entrys不会真的分配size只会size*2/3，index是要真的分配size长度
+- 所以如果entrys满了，会触发resize，但indexs是还有可复用空间的(dummy可以转active)，这种是假resize只会重新分配entrys
+- 如果是indices达到了分界，则会真resize
+
+其他特点：
+- 不同于空list，空dict也分配了8个单位，初始字节: PYDICT_MINSIZE
+- 索引的单位长度根据数据规模来，默认1Byte即map存储在128个数据内的情况
+- **分索引和entry的原因是因为冗余空间存在，拿索引去冗余的代价比较小，entry表是顺序表**
+- py3.7之后的顺序结构就是因为引入了entry的顺序存储
+
