@@ -33,7 +33,8 @@ struct PyTypeObject{
 }
 ````
 **实例**，(会运行起来的)：  
-类型实例(涉及操作集方法的添加)：PyFloat_Type/PyType_Type/PyBaseObj_type，对象实例(设计到具体的数据存储字段的引用)：PY_FLOATOBJ/...  
+- 类型实例(涉及操作集方法的添加)：PyFloat_Type/PyType_Type/PyBaseObj_type
+- 对象实例(设计到具体的数据存储字段的引用)：PY_FLOATOBJ/...  
 ![image](https://github.com/user-attachments/assets/3b7e97eb-12fd-4896-8d89-96ace15463af)
 ![1742497089651](https://github.com/user-attachments/assets/6c1ee405-1a92-45e9-b68d-ea31c3953e9d)
 
