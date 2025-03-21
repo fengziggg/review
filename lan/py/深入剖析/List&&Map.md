@@ -10,7 +10,7 @@
 - ob_item数组表指针
 - ob_allocator目前划定的容量上限
 - ob_size已经分配的元素数量(PyVarObj_Head)
-  
+
 ![image](https://github.com/user-attachments/assets/c9ec89cf-3d14-4575-989d-c45bb60b6bb4)
 
 
@@ -55,6 +55,8 @@ remove:
 - 可Hash对象：1. 不可变对象，2. hash值可以比较运算
 
 结构体：  
+![image](https://github.com/user-attachments/assets/86d3e095-cd85-4d99-aff2-e9409155fdad)  
+
 ![1742548386190](https://github.com/user-attachments/assets/90707b97-6d93-457a-903c-0239487a29b6)
 PyDictObject(只是个PyObject的主体结构引用住真正的KeyObject)：ma_keys（存储key表），ma_value（旧版字段可以忽略）  
 KeyObject(具体维持整个map的数据的表)：  
