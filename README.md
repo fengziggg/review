@@ -78,8 +78,9 @@ u3ddemo
 - og🚫
 
 3.22
-- py练手 + 阅读源码 + collection + socket + py面经
+- py练手1 + 阅读源码 + py练手2 + collection + socket + py面经
 - C+ 八股一篇，stl一个练手，八股知识点修复
+- 
 - cocos复习 + 引擎练手 + 编译 + py封装
 - imgui，对象池复用，状态同步的模拟)
 - og
