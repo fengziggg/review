@@ -277,6 +277,101 @@ def p8():
     b = A(200)
     print(a <= b)
 
+@splite_out
+def p9():
+    ### mro: 拓扑排序+定义顺序
+    # 在mro基础上，有super的就能继承下去，没有就断开
+    class A:
+        def test(self):
+            print("A.test")
+    class B:
+        def test(self):
+            super(B, self).test()
+            print("B.test")
+    class C(A, B):
+        def test(self):
+            super(C, self).test()
+            print("C.test")
+    class D(B, A):
+        def test(self):
+            super(D, self).test()
+            print("D.test")
+    C().test()
+    print(C.__mro__)
+
+    D().test()
+    print(D.__mro__)
+
+@splite_out
+def p10():
+    # 抽象类==接口
+    from abc import ABCMeta, abstractmethod
+    class A(metaclass=ABCMeta):
+        @property
+        @abstractmethod
+        def func1(self):
+            pass
+        @property
+        @abstractmethod
+        def func2(self):
+            print("----abs func2------")
+            pass
+    class B(A):
+        pass
+    class C(A):
+        def func2(self):
+            print("over abstract")
+    class D(A):
+        def func1(self):
+            pass
+        # @property ???
+        def func2(self):
+            print("-----getter------")
+            pass
+        # @A.func2.setter
+        # def func2(self, val):
+        #     print("setter")
+        #     self.v = val
+    try:
+        a = A()
+    except Exception as e:
+        try:
+            print(e)
+            b = B()
+        except Exception as e:
+            try:
+                print(e)
+                c = C()
+                print(c)
+            except Exception as e:
+                print(e)
+                d = D()
+                print(d.func2)
+                d.func2 = "haha"
+
+@splite_out
+def p11():
+    from collections import Iterable, Sequence
+    import numbers
+    import operator
+    class A(Iterable):
+        def __iter__(self):
+            print("my iter")
+    class B(Sequence):
+        def __getitem__(self, idx):
+            print("get item: ", idx)
+            return 0
+        def __len__(self):
+            print("get len")
+            return 0
+    a = A()
+    b = B()
+    print(len(b), b[10])
+    print(isinstance(a, Iterable))
+    print(isinstance(a, Sequence))
+    print(isinstance(a, Iterable))
+
+
 if __name__ == "__main__":
     print("class...")
     p1()
@@ -287,6 +382,7 @@ if __name__ == "__main__":
     p6()
     p7()
     p8()
-
-
+    p9()
+    p10()
+    p11()
 ```
