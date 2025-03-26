@@ -18,6 +18,10 @@
 #### early-z  
   - 光栅化之后，片段着色器之前
   - 会被Aplha测试，alphadiscard打断，因为如果要进行这些，那处于后面的片段是不能被丢弃的
+  - Early Z 是 GPU 的优化行为，依赖深度测试的开启和合理的渲染流程。
+  - 开发者通过配置深度测试和渲染顺序，间接“触发” Early Z，而非直接开启某个开关
+  - Gl_Enable(DepthTest)/Gl_TepthMask(GL_TRUE)/由近到远渲染不透明队列/半透队列完全不搞这一套
+  - 用RenderDoc看一个draw里面片段的调用是否少了
 
 #### HSR，渲染路径DR，TBDR...  
 
