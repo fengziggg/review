@@ -16,6 +16,8 @@
 #### matcap  
 
 #### early-z  
+  - 光栅化之后，片段着色器之前
+  - 会被Aplha测试，alphadiscard打断，因为如果要进行这些，那处于后面的片段是不能被丢弃的
 
 #### HSR，渲染路径DR，TBDR...  
 
