@@ -47,5 +47,5 @@ encode/decode:
 - 如果是载体 =映射回=>码值，则一份Bytes可以按不同的编码方式解析出不同的码值，所以**反向解码的时候什么样的载体(编码方式)就得用什么方式解码回去(decode)**
 
 与py2的差异：
-- py2 类型是str(等同于Bytes)和Unicode， 两者会隐式转换， 文件读写默认是str(Bytes)
+- py2 类型是str(等同于Bytes)和Unicode， 两者会隐式转换， 文件读写默认是str(Bytes)，unicode只有encode接口，str只有decode接口跟py3相反。。
 - Py3 类型是str(unicode) 和 Bytes， 两者无法直接操作(str+Bytes抛异常)， 文件默认读写是str(Unicode)
