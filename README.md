@@ -15,7 +15,7 @@
 - ecs
 - coco_cpp_binding
 - render
-- [c+/algo]
+- [(renderTex/batchNode)/c+/algo]
 
 ---
 2025/2/16- 
