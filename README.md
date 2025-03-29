@@ -9,13 +9,15 @@
 
 以往项目：  
 风险点：  
-- 多人联机    
-- 预表现管线
-- 状态同步战斗流程
-- ecs
-- coco_cpp_binding
-- render
-- [(renderTex/batchNode)/c+/algo]
+- 多人联机🚫   
+- 预表现管线🚫
+- coco_cpp_binding🚫     
+- 状态同步战斗流程✅
+- c+
+- algo    
+- ecs  
+- render/opengl渲染基础  
+- [(renderTex/batchNode)/]  
 
 ---
 2025/2/16- 
