@@ -136,10 +136,4 @@ encode/decode
 4. ascii和utf转换报错一般是utf转ascii，因为utf转为二进制数据后一个字节可能被填满但ascii的范围只有128一个字节有一半是非法定义的
 ![image](https://github.com/user-attachments/assets/6f04d6bf-ac65-46bb-9d7f-0da5a9e23421)
 
-pickle  ❓❓
-
-import local? global??
-
-关于闭包的定义❓❓
-
 
