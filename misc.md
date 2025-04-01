@@ -21,5 +21,5 @@
      - 除法，py2是整除，py3是浮点除，用__future__.__division__指定
      - str-char[]-unicode.de/encode：显示的指定u"", b""可以在2/3兼容，不然2/3对于未指定的字符常量是当作不同对象来处理的，对应的操作集也不同
      - io：指定编码格式，显示用io.open不要用内置open(对于两个版本的文件处理也是不一致的)
-     - pickle：指定protocol版本，py2版本0是ascii新能差，py3版本3性能好不好读，python加载py2可以指定编码格式为latin
+     - pickle：指定protocol版本，py2版本0是ascii性能差最好指定版本2进行迁移测试，py3版本3性能好不好读，py3加载py2可以指定编码格式为latin
    - 性能变化：dict的索引机制，range的语义变化导致
