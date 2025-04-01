@@ -11,3 +11,14 @@
    - > 排序后如果对所有y进行排序，相当于固定一个轴扫描，找每个x对应的上下界，待会处理也是分上下界
      > 当前最新的边都不是稳定的，可能遇到一个极端的新点一次性要回溯撤销此前已经确定下来的若干边
      > ![image](https://github.com/user-attachments/assets/2ab6ce8e-95c1-4922-9cf8-873e0ed07437)  
+
+3. py2转p3可能的问题：
+   - 语法兼容：print，
+   - 语义变化：
+     - range(生成器和推导式)
+     - object(新旧类)
+     - dict的有序遍历
+     - str-char[]-unicode.de/encode：显示的指定u"", b""可以在2/3兼容，不然2/3对于未指定的字符常量是当作不同对象来处理的，对应的操作集也不同
+     - io：指定编码格式，显示用io.open不要用内置open(对于两个版本的文件处理也是不一致的)
+     - pickle：指定protocol版本，py2版本0是ascii新能差，py3版本3性能好不好读，python加载py2可以指定编码格式为latin
+   - 性能变化：dict的索引机制，range的语义变化导致
