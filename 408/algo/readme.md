@@ -10,7 +10,17 @@
 #### 最大/小K个：
 - 堆反向使用
 - 小根堆过滤一遍后，堆里面的剩下的是这个队列里面最大的k个(小的全被吐出去了，只有顺位前k的才能一直留下来不会被洗牌)
-  
+
+#### 目标分离的二分迭代：
+- 普通二分target_val就是key本身，用target_val进行比较就能驱动key移动缩小范围
+- 变种的二分target_val跟key可能是不一样的，key二分之后要算最新的val跟target_val比较，但是驱动key移动
+
+---
+🟡适合作为基础练手/一般是基础且经典数据结构和算法
+🔽水题/随时做得出来的难度
+🟩有技巧点/没整理过可能会被卡住
+🟥难度toMyself
+
 ---
 #### 树：
 - 🔽[043.往完全二叉树添加节点](https://github.com/doocs/leetcode/blob/main/lcof2/%E5%89%91%E6%8C%87%20Offer%20II%20043.%20%E5%BE%80%E5%AE%8C%E5%85%A8%E4%BA%8C%E5%8F%89%E6%A0%91%E6%B7%BB%E5%8A%A0%E8%8A%82%E7%82%B9/README.md)
@@ -108,23 +118,34 @@
   - 加速的点可以用树的01有序性，也是要遍历n个节点，只是每个节点有目的的反向找存在路径与否并求异或值
   - > 如果想用最长路径，然后定向匹配另一个反向分支，没法o(1)找到最优分支的，而且前面构建树已经是o(n)不要被这个思路误导
 
-- []()
-  - 
+---
+### 二分：
+- 🟡[068. 查找插入位置](https://github.com/doocs/leetcode/blob/main/lcof2/%E5%89%91%E6%8C%87%20Offer%20II%20068.%20%E6%9F%A5%E6%89%BE%E6%8F%92%E5%85%A5%E4%BD%8D%E7%BD%AE/README.md)
+  - 二分查找：基础练手
 
-- []()
-  - 
+- 🔽[069. 山峰数组的顶部](https://github.com/doocs/leetcode/blob/main/lcof2/%E5%89%91%E6%8C%87%20Offer%20II%20069.%20%E5%B1%B1%E5%B3%B0%E6%95%B0%E7%BB%84%E7%9A%84%E9%A1%B6%E9%83%A8/README.md)
+  - 无脑二分查找，都不用去判断什么左右，二分查找的鲁棒性会让他mid命中山峰后继续迭代最后停在山峰（条件只需要l>r）
+  - 注意二分的条件，右界左移不用-1，左界右移需要+1
 
-- []()
-  - 
+- 🟩[070. 排序数组中只出现一次的数字](https://github.com/doocs/leetcode/blob/main/lcof2/%E5%89%91%E6%8C%87%20Offer%20II%20070.%20%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E5%8F%AA%E5%87%BA%E7%8E%B0%E4%B8%80%E6%AC%A1%E7%9A%84%E6%95%B0%E5%AD%97/README.md)
+  - 题意条件是除了一个是单个元素，其余都是成对的，且有序排列
+  - (aa)*(bb)或者(aa)(bb)*(cc)阵型
+  - (aa)*(bb)类型的只要 *不在中间，如果在左边会挤左边的(aa)对到中间(mid-1,mid)相同，如果 * 在右边则(mid-1,mid)是a)(b
+  - (aa)(bb)*(cc)类型的判断 * 的条件刚好相反
+  - 🟥至于细分(费解的技巧)，自己实现的时候应该可以成对的偏移？？
+  - ![image](https://github.com/user-attachments/assets/601b1836-a588-43a2-a0d1-5186e91cfeef)
 
-- []()
-  - 
+- 🔽[071. 按权重生成随机数](https://github.com/doocs/leetcode/blob/main/lcof2/%E5%89%91%E6%8C%87%20Offer%20II%20071.%20%E6%8C%89%E6%9D%83%E9%87%8D%E7%94%9F%E6%88%90%E9%9A%8F%E6%9C%BA%E6%95%B0/README.md)
+  - 用随机库函数模拟的没有什么
+  - 但面试考到了模拟随机发牌相关...
 
-- []()
-  - 
-
-- []()
-  - 
+- 🟩[072. 求平方根](https://github.com/doocs/leetcode/blob/main/lcof2/%E5%89%91%E6%8C%87%20Offer%20II%20072.%20%E6%B1%82%E5%B9%B3%E6%96%B9%E6%A0%B9/README.md)
+  - 二分快速判定(0-target)内的x，用x^2与target进行比较，驱动的是x
+- 🟩[073. 狒狒吃香蕉]()
+  - 每个x对应一个y高度
+  - 比较key是一个y%n的n范围，初始值取上界maxY
+  - 比较函数是每个floor(y%n)的累加 sum(floor(Y(i)%n))与target_val
+  - 这种是需要key的单调性与func(key, target_val)的单调性一致才行
 
 - []()
   - 
