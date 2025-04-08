@@ -13,7 +13,7 @@
      > 当前最新的边都不是稳定的，可能遇到一个极端的新点一次性要回溯撤销此前已经确定下来的若干边
      > ![image](https://github.com/user-attachments/assets/2ab6ce8e-95c1-4922-9cf8-873e0ed07437)  
 
-##### 3. py2转p3可能的问题：
+3. ##### py2转p3可能的问题：
    - 语法兼容：print，
    - 语义变化：
      - range(生成器和推导式)
